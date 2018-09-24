@@ -1,0 +1,19 @@
+<div class="edit-container">
+<%= form_with model: @task, class: 'edit-form' do |f| %>
+
+  <p>Please edit the information for the selected task here:</p>
+
+  <h2>Edit Task Form</h2>
+
+  <%= f.label :action %>
+  <%= f.text_field :action, class: "add-task" %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, class: "task-description" %>
+
+  <%= f.label :completion_date %>
+  <%= f.text_field :completion_date, class: "form-completion-date" %>
+
+  <%= f.submit "Save Task", class: "task-button" %>
+<% end %>
+</div>

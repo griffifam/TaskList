@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div class="div1">
+    <h3>
+      <%= link_to "new tasks", new_task_path, class: "new-task" %>
+    </h3>
+  </div>
+  <div class="div2">
+    <h3>
+      <%= link_to "all tasks", all_tasks_path, class: "homepage" %>
+    </h3>
+  </div>
+  <div class="div3">
+    <h3>your tasks</h3>
+    <ol>
+      <% i = 0 %>
+      <% @tasks.each do |task| %>
+      <li>
+        <p>
+          <%= "#{task.action}" %>
+          <br>
+          <% if task.mark_complete == "Mark Complete" %>
+          <%= link_to "Mark Complete", complete_path(task.id), method: :patch, class: "completion-button" %>
+          <% elsif task.mark_complete == "Unmark Complete" %>
+          <%= link_to "UnMark Complete", complete_path(task.id), method: :patch, class: "completion-button" %>
+          <% end %> |
+          <%= link_to "Details", task_path(task.id), class: "book-link" %> |
+          <%= link_to "Edit", edit_task_path(task.id), class: "edit-link" %> |
+          <%= link_to "Delete", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to get rid of the -#{task.action}- task?" } %>
+        </p>
+      </li>
+
+      <% end %>
+    </ol>
+  </div>
+
+</div>

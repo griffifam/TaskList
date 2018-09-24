@@ -1,3 +1,85 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 1px solid gray;
+  // background-color: orange;
+  margin: 0px;
+}
+
+.div1 {
+  text-align: center;
+  height: auto;
+  grid-column: 1;
+  grid-row: 1;
+  text-transform: capitalize;
+}
+
+.div2 {
+  // padding: 100px;
+  text-align: center;
+  height: auto;
+  grid-column: 1;
+  grid-row: 2;
+  text-transform: capitalize;
+}
+
+.div3 {
+  padding: 80px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  border: 5px solid black;
+  border-radius: 10%;
+}
+
+.div1 h3 {
+  border: 1px solid red;
+  margin-left: 123px;
+  margin-top: 80px;
+  padding: 0px;
+  border-radius: 15px;
+  height: 80px;
+  width: 178px;
+}
+
+.div2 h3 {
+  padding: 0px;
+  border: 1px solid red;
+  width: 178px;
+  height: 80px;
+  border-radius: 15px;
+  margin-left: 123px;
+}
+
+.div3 h3 {
+  padding: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+li::first-line {
+  font-weight: bold;
+}
+
+.description-container {
+  margin: 0px;
+  height: 500px;
+  background-color: orange;
+}
+
+.task-container {
+  height: inherit;
+  margin: 0px;
+}
+
+.edit-container {
+  margin: 0px;
+  height: inherit;
+}

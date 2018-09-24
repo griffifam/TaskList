@@ -1,0 +1,11 @@
+<div class="description-container">
+  
+<h2><%= @task.action %></h2>
+
+<p class="description-text"><%= @task.description %> | <%= @task.completion_date %></p>
+</div>
+<div class="return-home">
+  <h3>
+    <%= link_to "Return Home", all_tasks_path, class: "homepage" %>
+  </h3>
+</div>
